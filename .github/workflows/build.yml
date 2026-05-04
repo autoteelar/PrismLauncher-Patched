@@ -5,15 +5,22 @@ concurrency:
   cancel-in-progress: true
 
 on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
   merge_group:
     types: [checks_requested]
-  pull_request:
   workflow_call:
     inputs:
       build-type:
         description: Type of build (Debug or Release)
         type: string
-        default: Debug
+        default: Release
       environment:
         description: Deployment environment to run under
         type: string
@@ -22,10 +29,9 @@ on:
       build-type:
         description: Type of build (Debug or Release)
         type: string
-        default: Debug
+        default: Release
 
 permissions: {}
-
 jobs:
   build:
     name: Build (${{ matrix.artifact-name }})
