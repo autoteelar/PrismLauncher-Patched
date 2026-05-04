@@ -114,3 +114,4 @@ All launcher code is available under the GPL-3.0-only license.
 The logo and related assets are under the CC BY-SA 4.0 license.
 # PrismLauncher-Patched
 # PrismLauncher-Patched
+# PrismLauncher-Patched
